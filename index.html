@@ -411,6 +411,74 @@
       text-underline-offset: 5px;
     }
 
+
+    /* Grab-inspired featured project: dark forest green #18392B */
+    .visual-grab {
+      color: #ffffff;
+      background: linear-gradient(135deg, #18392b 0%, #254d3c 100%);
+    }
+
+    .visual-grab .visual-label,
+    .visual-grab .visual-subtitle {
+      color: #e8f7ee;
+    }
+
+    .grab-kpis {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .grab-kpi {
+      min-width: 0;
+      padding: 12px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .grab-kpi strong {
+      display: block;
+      font-size: clamp(17px, 2vw, 23px);
+      line-height: 1.2;
+      color: #ffffff;
+    }
+
+    .grab-kpi span {
+      display: block;
+      margin-top: 6px;
+      font-size: 10px;
+      line-height: 1.4;
+      color: #e8f7ee;
+    }
+
+    .project-grab {
+      border-color: #b9d2c3;
+    }
+
+    .project-grab:hover {
+      box-shadow: 0 16px 35px rgba(24, 57, 43, 0.18);
+    }
+
+    .project-grab .project-type,
+    .project-grab .project-link,
+    .project-grab li::marker {
+      color: #18392b;
+    }
+
+    .project-grab .tag {
+      background: #e8f2eb;
+      color: #18392b;
+    }
+
+    @media (max-width: 380px) {
+      .grab-kpis { gap: 5px; }
+      .grab-kpi { padding: 9px 6px; }
+      .grab-kpi strong { font-size: 17px; }
+      .grab-kpi span { font-size: 9px; }
+    }
+
     /* About and skills */
     .about-section {
       background: var(--white);
@@ -641,6 +709,76 @@
         </div>
 
         <div class="projects-grid">
+
+
+          <!-- Grab-Inspired Ride-Hailing Analytics: featured first -->
+          <article class="project project-grab">
+            <div class="project-visual visual-grab">
+              <p class="visual-label">Ride-Hailing & Operations Analytics</p>
+              <p class="visual-title">Grab-Inspired<br>Ride-Hailing Analytics</p>
+              <p class="visual-subtitle">
+                SQL Server · Power BI · Synthetic Case Study
+              </p>
+
+              <div class="grab-kpis" aria-label="Simulated project metrics, not Grab company statistics">
+                <div class="grab-kpi">
+                  <strong>125.9K</strong>
+                  <span>Booking Requests</span>
+                </div>
+                <div class="grab-kpi">
+                  <strong>18.25%</strong>
+                  <span>Failure Rate</span>
+                </div>
+                <div class="grab-kpi">
+                  <strong>31.36%</strong>
+                  <span>Occupied Utilization</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <p class="project-type">Operations Analytics & Business Intelligence</p>
+              <h3>Grab-Inspired Ride-Hailing Analytics</h3>
+
+              <div class="tags" aria-label="Skills used">
+                <span class="tag">SQL Server</span>
+                <span class="tag">T-SQL</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">DAX</span>
+              </div>
+
+              <p class="project-summary">
+                Analyzed synthetic ride-hailing operations across booking demand,
+                trip fulfillment, driver supply, and customer retention to identify
+                operational bottlenecks and improvement opportunities.
+              </p>
+
+              <ul>
+                <li>
+                  Validated and analyzed 125,923 booking requests using SQL Server,
+                  CTEs, window functions, and analytical views.
+                </li>
+                <li>
+                  Built a four-page Power BI dashboard covering demand patterns,
+                  cancellations, driver utilization, and customer retention.
+                </li>
+                <li>
+                  Identified fulfillment challenges and developed evidence-based
+                  recommendations for operational experiments.
+                </li>
+              </ul>
+
+              <a
+                class="project-link"
+                href="https://github.com/anhthunguyen-2000/grab-ride-hailing-analytics"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Grab-Inspired Ride-Hailing Analytics on GitHub"
+              >
+                Explore on GitHub ↗
+              </a>
+            </div>
+          </article>
 
           <!-- Retail Sales Analytics -->
           <article class="project">
